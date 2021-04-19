@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,27 +12,11 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <style>
-      body {
-        background-color: #ebeff5;
-      }
-
-      .row {
-        padding: 2rem;
-      }
-
-      #total-orders {
-        background-color: #4cb4c7;
-      }
-
-      #orders-delivered {
-        background-color: #7abecc;
-      }
-
-      #orders-pending {
-        background-color: #7cd1c0;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static '/style/main.css' %}"
+    />
     <title>CRM</title>
   </head>
   <body>

@@ -1,0 +1,24 @@
+body {
+  background-color: #ebeff5;
+}
+
+.logo {
+  height: 1.5rem;
+  padding-right: 2rem;
+}
+
+.row {
+  padding: 2rem;
+}
+
+#total-orders {
+  background-color: #4cb4c7;
+}
+
+#orders-delivered {
+  background-color: #7abecc;
+}
+
+#orders-pending {
+  background-color: #7cd1c0;
+}
