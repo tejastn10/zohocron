@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.forms import inlineformset_factory
+from django.contrib import messages
 
 from .models import *
 from .filters import OrderFilter
@@ -13,6 +14,11 @@ def registerPage(request):
         form = UserForm(request.POST)
         if form.is_valid():
             form.save()
+            user = form.cleaned_data.get('username')
+            messages.success(
+                request, 'Account was created successfully for ' + user)
+
+            return redirect('login')
 
     context = {
         'form': form,
