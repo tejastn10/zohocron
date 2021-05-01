@@ -1,5 +1,12 @@
 {% load static %}
 
+<style>
+  .hello {
+    font-size: 1.2rem;
+    margin-right: 1.4rem;
+  }
+</style>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
   <a href="{% url 'home' %}">
     <img src="{% static 'images/logo.png' %}" class="logo" alt="logo" />
@@ -21,4 +28,9 @@
       <a class="nav-item nav-link" href="{% url 'products' %}">Products</a>
     </div>
   </div>
+
+  <span class="hello">Hello, {{request.user}} </span>
+  <span
+    ><a class="btn btn-sm btn-danger" href="{% url 'logout' %}">Logout</a>
+  </span>
 </nav>
